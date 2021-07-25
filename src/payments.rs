@@ -69,7 +69,7 @@ where
     }
 }
 
-pub trait Container {
+pub trait Container: private::Sealed {
     fn get_or_create(&self, id: &ClientID) -> Result<Account, ActionError>;
     fn get_account(&self, id: &ClientID) -> Result<Account, ActionError>;
     fn save_account(&mut self, acc: Account);
