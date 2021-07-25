@@ -1,0 +1,19 @@
+[package]
+name = "payments"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rust_decimal = {version = "1.14.3", features = ["serde-bincode"]}
+csv = "1.1.6"
+serde = {version = "1.0.126", features = ["derive"]}
+sled = "0.34.6"
+bincode = "1.0"
+
+[profile.release]
+panic = "unwind"
+lto = true
+opt-level = 3
+codegen-units = 1
