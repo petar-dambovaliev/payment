@@ -28,7 +28,6 @@ macro_rules! handle {
 
 const DB_PATH: &str = "./db/";
 
-// A question for Kraken
 // Why isn't the amount in the smallest divisible unit?
 // It is less error prone and easier to handle
 fn main() -> csv::Result<()> {
